@@ -1,0 +1,7 @@
+/*@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";*/
+@import "https://kit.fontawesome.com/3c281ca083.js";
+.form-inline { 
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
