@@ -1,4 +1,3 @@
-![SE](https://user-images.githubusercontent.com/79364805/118849948-ded20d80-b8ed-11eb-8a71-bc3a1bc1d5fa.png)
 # Intro!
 Introducing the all-new Search Engine (SE-v0.1.1)!
 My Search Engine currently has 110 possible searches!
@@ -28,3 +27,5 @@ Have Fun!
 # Outro!
 Regards,
 G77LAIP-wx
+
+![SE](https://user-images.githubusercontent.com/79364805/118854826-be588200-b8f2-11eb-87bd-ead9ea563511.png)
