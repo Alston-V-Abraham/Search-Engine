@@ -1,3 +1,4 @@
+![SE](https://user-images.githubusercontent.com/79364805/118849948-ded20d80-b8ed-11eb-8a71-bc3a1bc1d5fa.png)
 # Intro!
 Introducing the all-new Search Engine (SE-v0.1.1)!
 My Search Engine currently has 110 possible searches!
