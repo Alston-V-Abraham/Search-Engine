@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Repl search | search: {{search}}</title>
+    <link rel="stylesheet" href="/static/searched.css">
+    <link rel="stylesheet" href="/static/default.css">
+    <script src='https://kit.fontawesome.com/3c281ca083.js'></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>/* unvisited link */
+    
+.link{
+  color: blue;
+  text-decoration: underline;
+}
+.title_link:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* visited link */
+.title_link:visited {
+  color: black;
+  text-decoration: none;
+}
+
+/* mouse over link */
+.title_link:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* selected link */
+.title_link:active {
+  color: black;
+  text-decoration: none;
+}</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class='topbar form-inline'>
+        <img src='https://cdn.codemonkey51.dev/content/other/repl-search.png' height=50px>
+        <form class='form-inline' action='/search'>
+          <input type='text' value='{{search}}' name='search' id='search'>
+          <input type='submit' value='Search'>
+        </form>
+        </div>
+      <h1>CURRENTLY IN BETA</h1>
+      <p class='results'>found {{ length }} results in {{ g.request_time() }}</p>
+      {% if spellChecked %}
+      <!--<p>Including results for <a href='/search?search={{checked}}'>{{checked}}</a>.</p>
+      <p>Do you only want results for <a href='/search?search={{phrase2}}'>{{search}}</a>?</p>-->
+      {% endif %}
+      {% if link|length == 0 %}
+      <p class='title'>No Results as this project is only in BETA-VERSION Yet! </p>
+      {% endif %}
+      {% for i in link %}
+        <a class='link title_link' href={{i['url']}}><p class='link'>{{ i['url'] }}</p><!--</a>
+        <a class='title_link' href={{i['url']}}>--><p class='title'>{% if i['ad'] %} <i class="fas fa-ad ad"></i> {% endif %}{{ i['title'] }}</p></a>
+        <p class='description'>{{ i['description'] }}</p>
+        <br>
+      {% endfor %}
+    </div>
+  </body>
+</html>
